@@ -1,6 +1,5 @@
 import React from "react";
 import { GrPersonalComputer } from "react-icons/gr";
-import { IconContext } from "react-icons";
 
 export default function Logo() {
   return (
