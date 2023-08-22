@@ -9,11 +9,13 @@ import {
 import RootPage from './pages/RootPage';
 import VideoDetailPage from './pages/VideoDetailPage';
 import VideoListPage from './pages/VideoListPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootPage />,
+    errorElement: <NotFoundPage />,
     children: [
       {
         index: true,
