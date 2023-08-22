@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function VideoSummary({ video }) {
+export default function VideoCard({ video }) {
   return (
     <div className="flex flex-col aspect-[5/4] mx-4 my-3 max-w-md max-h-96">
       <img

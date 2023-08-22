@@ -1,5 +1,5 @@
 import React from "react";
-import VideoSummary from "../components/VideoSummary";
+import VideoCard from "../components/VideoCard";
 import { Link, useSearchParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { useApiContext } from "../context/ApiContext";
@@ -21,7 +21,7 @@ export default function VideoListPage() {
         <ul>
           {videos.map((video) => (
             <Link to={`/videos/${video.id.videoId}`} key={video.id.videoId}>
-              <VideoSummary video={video} />
+              <VideoCard video={video} />
             </Link>
           ))}
         </ul>
