@@ -10,34 +10,6 @@
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "0JhqE674meMvxZhomZhBT-zoEOE",
-      "id": {
-        "kind": "youtube#channel",
-        "channelId": "UCSEOUzkGNCT_29EU_vnBYjg"
-      },
-      "snippet": {
-        "publishedAt": "2019-07-08T06:51:37Z",
-        "channelId": "UCSEOUzkGNCT_29EU_vnBYjg",
-        "title": "개발바닥",
-        "description": "본격 세계최초 DEV 엔터테인먼트 토크쇼 두 스타트업 개발자의 요절복통 이야기 구독 안하면 장애남!!",
-        "thumbnails": {
-          "default": {
-            "url": "https://yt3.ggpht.com/ytc/AOPolaQAv1Y_Ys6JnxGMu5QdqDWB8mcZAKoSXoOypQi2=s88-c-k-c0xffffffff-no-rj-mo"
-          },
-          "medium": {
-            "url": "https://yt3.ggpht.com/ytc/AOPolaQAv1Y_Ys6JnxGMu5QdqDWB8mcZAKoSXoOypQi2=s240-c-k-c0xffffffff-no-rj-mo"
-          },
-          "high": {
-            "url": "https://yt3.ggpht.com/ytc/AOPolaQAv1Y_Ys6JnxGMu5QdqDWB8mcZAKoSXoOypQi2=s800-c-k-c0xffffffff-no-rj-mo"
-          }
-        },
-        "channelTitle": "개발바닥",
-        "liveBroadcastContent": "upcoming",
-        "publishTime": "2019-07-08T06:51:37Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
       "etag": "NTvXPHOH6Xy2YM1brn4FRxNFAW4",
       "id": {
         "kind": "youtube#video",
