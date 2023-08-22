@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Children } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
@@ -7,11 +7,31 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import RootPage from './pages/RootPage';
+import VideoDetailPage from './pages/VideoDetailPage';
+import VideoListPage from './pages/VideoListPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <RootPage />
+    element: <RootPage />,
+    children: [
+      {
+        index: true,
+        element: <VideoListPage />
+      },
+      {
+        path: "/videos",
+        element: <VideoListPage />
+      },
+      {
+        path: "/videos:keyword",
+        element: <VideoListPage />
+      },
+      {
+        path: "/videos/:videoId",
+        element: <VideoDetailPage />
+      }
+    ],
   },
 ]);
 
