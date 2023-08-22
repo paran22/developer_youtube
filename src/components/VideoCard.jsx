@@ -1,10 +1,22 @@
 import React from "react";
 import { formatKo } from "../utils/timeago";
+import { useNavigate } from "react-router-dom";
 
 export default function VideoCard({ video }) {
   const { thumbnails, channelTitle, title, publishedAt } = video.snippet;
+  const navigate = useNavigate();
+  const navigateDetail = (video) => {
+    navigate(`/videos/${video.id.videoId}`, {
+      state: {
+        vedio: video.snippet,
+      },
+    });
+  };
   return (
-    <div className="flex flex-col aspect-[5/4] max-w-md max-h-96">
+    <div
+      className="flex flex-col aspect-[5/4] max-w-md max-h-96"
+      onClick={() => navigateDetail(video)}
+    >
       <img
         className="rounded-lg w-full"
         src={thumbnails.medium.url}
