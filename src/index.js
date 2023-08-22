@@ -6,15 +6,15 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import RootPage from './pages/RootPage';
 import VideoDetailPage from './pages/VideoDetailPage';
 import VideoListPage from './pages/VideoListPage';
 import NotFoundPage from './pages/NotFoundPage';
+import App from './App';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <RootPage />,
+    element: <App />,
     errorElement: <NotFoundPage />,
     children: [
       {
