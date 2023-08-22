@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import VideoSummary from "../components/VideoSummary";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 
 export default function VideoListPage() {
+  const [searchParams] = useSearchParams();
+  const query = searchParams.get("keyword");
+  console.log(query);
   const [videos, setVideos] = useState([]);
   useEffect(() => {
     fetch("data/dummy.json")
@@ -10,9 +13,11 @@ export default function VideoListPage() {
       .then((data) => setVideos(data.items));
   }, []);
   return (
-    <div className='w-4/5 mx-auto pt-4 pb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+    <div className="w-4/5 mx-auto pt-4 pb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       {videos.map((video) => (
-        <Link to={`/videos/${video.id.videoId}`} key={video.id.videoId}><VideoSummary video={video}/></Link>
+        <Link to={`/videos/${video.id.videoId}`} key={video.id.videoId}>
+          <VideoSummary video={video} />
+        </Link>
       ))}
     </div>
   );
