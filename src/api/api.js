@@ -9,7 +9,7 @@ export default class Api {
   // }
 
   async getVideos(keyword) {
-    const items = await this.httpClient.get('/search', {
+    const items = await this.httpClient.get('search', {
       params: {
         part: 'snippet',
         maxResults: 20,
@@ -23,10 +23,17 @@ export default class Api {
 
   async getDummyVideos(keyword) {
     const items = await axios
-      .get("data/dummy.json")
+      .get("data/videoDummy.json")
       .then((res) => res.data.items);
     console.log(items);
     return items;
+  }
+
+  async getDummyChannel() {
+    const items = await axios
+      .get("channelDummy.json")
+      .then((res) => res.data.items);
+    return items[0];
   }
 }
 
