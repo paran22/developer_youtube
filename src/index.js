@@ -1,4 +1,4 @@
-import React, { Children } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
@@ -23,10 +23,6 @@ const router = createBrowserRouter([
       },
       {
         path: "/videos",
-        element: <VideoListPage />
-      },
-      {
-        path: "/videos:keyword",
         element: <VideoListPage />
       },
       {
