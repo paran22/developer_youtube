@@ -1,12 +1,12 @@
-import React from 'react'
-import Logo from './Logo'
-import Search from './Search'
+import React from "react";
+import Logo from "./Logo";
+import Search from "./Search";
 
 export default function Header() {
   return (
-    <div className='flex w-5/6 mx-auto py-4 items-center justify-between px-4'>
-    <Logo />
-    <Search />
-    </div>
-  )
+    <header className="flex w-5/6 mx-auto py-4 items-center justify-between px-4">
+      <Logo />
+      <Search />
+    </header>
+  );
 }
