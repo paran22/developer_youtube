@@ -2,12 +2,15 @@
 module.exports = {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
+    colors: {
+      background: '#000000',
+      primary: '#4E4FEB',
+      secondary: '#068FFF',
+      light: '#EEEEEE',
+    },
     extend: {
-      colors: {
-        background: '#000000',
-        primary: '#4E4FEB',
-        secondary: '#068FFF',
-        light: '#EEEEEE',
+      aspectRatio: {
+        '5/4': '5 / 4',
       }
     },
   },
