@@ -14,11 +14,11 @@ export default function VideoListPage() {
     data: videos,
   } = useQuery(["videos", keyword], async () => api.getDummyVideos(keyword));
   return (
-    <div className="w-4/5 mx-auto pt-4 pb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    <div className="w-4/5 mx-auto pt-4 pb-10">
       {isLoading ?? <p>Loading...</p>}
       {!error ?? <p>error...</p>}
       {videos && (
-        <ul>
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 gap-y-4">
           {videos.map((video) => (
             <Link to={`/videos/${video.id.videoId}`} key={video.id.videoId}>
               <VideoCard video={video} />
