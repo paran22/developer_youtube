@@ -9,12 +9,16 @@ export default function VideoDetailCard({ videoId, channelId }) {
     isLoadingInChannel,
     hasErrorInChannel,
     data: channel,
-  } = useQuery(["channels", channelId], async () => api.getDummyChannel());
+  } = useQuery(["channels", channelId], async () => api.getChannel(channelId), {
+    staleTime: 1000 * 60 * 5,
+  });
   const {
     isLoadingInVideo,
     hasErrorInVideo,
     data: video,
-  } = useQuery(["video", videoId], async () => api.getDummyVideo());
+  } = useQuery(["video", videoId], async () => api.getVideo(videoId), {
+    staleTime: 1000 * 60 * 1,
+  });
   return (
     <>
       {isLoadingInChannel && <p>Loading...</p>}

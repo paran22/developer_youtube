@@ -5,8 +5,12 @@ import { VideoCard, cardStyle } from "./VideoCard";
 
 export default function HorizontalVideoList({ channelId }) {
   const { api } = useApiContext();
-  const { data: videos } = useQuery(["videos", channelId], async () =>
-    api.getDummyChannelVideo()
+  const { data: videos } = useQuery(
+    ["videos", channelId],
+    async () => api.getChannelVideos(channelId),
+    {
+      staleTime: 1000 * 60 * 5,
+    }
   );
 
   return (

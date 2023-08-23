@@ -12,13 +12,15 @@ export default function VideoListPage() {
     isLoading,
     error: hasError,
     data: videos,
-  } = useQuery(["videos", keyword], async () => api.getDummyVideos(keyword));
+  } = useQuery(["videos", keyword], async () => api.getVideos(keyword), {
+    staleTime: 1000 * 1,
+  });
   return (
     <div className="w-4/5 mx-auto pt-4 pb-10">
       {isLoading && <p>Loading...</p>}
       {hasError && <p>error...</p>}
       {videos && (
-        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 gap-y-4">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 gap-y-2">
           {videos.map((video) => (
             <VideoCard video={video} cardStyle={cardStyle.large} />
           ))}
