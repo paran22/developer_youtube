@@ -31,11 +31,11 @@ export function VideoCard({ video, style }) {
       onClick={() => navigateDetail(video)}
     >
       <img
-        className="rounded-lg w-full"
+        className="rounded-lg object-contain aspect-video"
         src={thumbnails.medium.url}
         alt={video.description}
       />
-      <div className="flex grow- px-2 py-2 gap-2 items-start">
+      <div className="flex px-2 py-2 gap-2 items-start whitespace-pre-wrap">
         <div className="flex-col">
           <p className={titleStyle}>{title}</p>
           {style === cardStyle.large && (
