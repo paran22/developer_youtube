@@ -3,7 +3,7 @@ import { useApiContext } from "../context/ApiContext";
 import { useQuery } from "@tanstack/react-query";
 import { VideoCard, cardStyle } from "./VideoCard";
 
-export default function ChannelVideoList({ channelId }) {
+export default function HorizontalVideoList({ channelId }) {
   const { api } = useApiContext();
   const { data: videos } = useQuery(["videos", channelId], async () =>
     api.getDummyChannelVideo()

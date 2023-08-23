@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import ChannelVideoList from "../components/ChannelVideoList";
+import HorizontalVideoList from "../components/HorizontalVideoList";
 import VideoDetailCard from "../components/VideoDetailCard";
 
 export default function VideoDetailPage() {
@@ -11,7 +11,7 @@ export default function VideoDetailPage() {
     <section className="w-5/6 mx-auto py-4 flex flex-col gap-4">
       <section className=""></section>
       <VideoDetailCard videoId={videoId} channelId={channelId} />
-      <ChannelVideoList channelId={channelId} />
+      <HorizontalVideoList channelId={channelId} />
     </section>
   );
 }
