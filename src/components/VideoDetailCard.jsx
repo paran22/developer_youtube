@@ -1,6 +1,7 @@
 import React from "react";
 import { useApiContext } from "../context/ApiContext";
 import { useQuery } from "@tanstack/react-query";
+import ChannelInfo from "./ChannelInfo";
 
 export default function VideoDetailCard({ videoId, channelId }) {
   const { api } = useApiContext();
@@ -32,14 +33,7 @@ export default function VideoDetailCard({ videoId, channelId }) {
             allowfullscreen
           />
           <p className="font-bold">{video.snippet.channeltitle}</p>
-          <section className="flex items-center gap-3">
-            <img
-              className="w-9 h-9 rounded-full"
-              src={channel.snippet.thumbnails.medium.url}
-              alt={""}
-            />
-            <p className="opacity-90 font-semibold">{channel.snippet.title}</p>
-          </section>
+          <ChannelInfo channel={channel.snippet} />
           <p className="whitespace-pre-line pt-4">
             {video.snippet.description}
           </p>
