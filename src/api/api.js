@@ -23,17 +23,23 @@ export default class Api {
 
   async getDummyVideos(keyword) {
     const items = await axios
-      .get("data/videoDummy.json")
+      .get("data/videosDummy.json")
       .then((res) => res.data.items);
-    console.log(items);
     return items;
   }
 
   async getDummyChannel() {
-    const items = await axios
+    const item = await axios
       .get("channelDummy.json")
-      .then((res) => res.data.items);
-    return items[0];
+      .then((res) => res.data.items[0]);
+    return item;
+  }
+
+  async getDummyVideo() {
+    const item = await axios
+      .get("videoDummy.json")
+      .then((res) => res.data.items[0]);
+    return item;
   }
 }
 

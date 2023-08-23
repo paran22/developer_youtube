@@ -1,0 +1,81 @@
+{
+  "kind": "youtube#videoListResponse",
+  "etag": "DQ3FZZoufn20XxQylakkkljqoJw",
+  "items": [
+    {
+      "kind": "youtube#video",
+      "etag": "ck-JEBjzIsNGvPaIlIYVZ3isXlg",
+      "id": "V9AGvwPmnZU",
+      "snippet": {
+        "publishedAt": "2019-12-03T12:00:04Z",
+        "channelId": "UCQ2DWm5Md16Dc3xRwwhVE7Q",
+        "title": "지방대 개발 비전공자가 배달의민족 리드 개발자가 되기까지",
+        "description": "영상 속 주인공 이동욱님은 현재 배달의민족에서 정산 시스템을 담당하는 리드 개발자로 일하고 있습니다. \n\n이동욱 개발자의 full story를 아티클로도 만나보세요! 👉 https://bit.ly/3MDjqGO\n\n동욱님은 소위 말하는 무스펙, 지방대, 비전공자 출신의 개발자였는데요. \n\nSI 회사를 거쳐 포털 회사에서 개발자로 일하고 있던 당시, 배달의민족의 한 팀장님으로부터 이직 제의를 받으셨다고 해요. \n그분이 먼저 연락을 주실 수 있었던 건 동욱님이 꾸준히 글을 올렸던 블로그 때문인데요. \n\n동욱님 블로그 _ https://jojoldu.tistory.com\n\n동욱님은 자신의 블로그명 '기억보다는 기록을'이 자신을 잘 나타내주는 말이라고 이야기합니다. 1일 1커밋을 비롯해 꾸준히 할 수 있는 습관을 가장 중요하게 생각하고 이를 통해 차곡차곡 성장해나가고 있는 개발자라는 생각이 들었는데요. \n\n동욱님 깃헙 _ https://github.com/jojoldu\n\n특히나 배달의민족처럼 빠르게 성장하는 스타트업에서 계속해서 성과를 내기 위해 업무 시간 외에도 미래를 위한 공부를 한다는 이야기가 인상 깊었습니다.\n\n개발자 뿐만 아니라 현재 커리어와 성장에 대한 고민을 하고 계신 분들\n무언가 새로운 도전을 망설이고 계신 분들에게도 이 영상을 추천드려요. \n\n---\n이 영상은 세계 1위 키보드 마우스 브랜드, 로지텍과 함께 만들었습니다.\n\n빠르게 성장하는 개발자를 위한 최고의 퍼포먼스 ! \n로지텍 프리미엄 마우스 MX Master 3\nhttps://smartstore.naver.com/ml/products/4666993946\n로지텍 프리미엄 키보드 MX KEYS \nhttps://smartstore.naver.com/ml/products/4666981696",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/V9AGvwPmnZU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/V9AGvwPmnZU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/V9AGvwPmnZU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/V9AGvwPmnZU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/V9AGvwPmnZU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "EO 이오",
+        "tags": [
+          "배달의민족",
+          "개발자",
+          "무스펙",
+          "지방대",
+          "비전공자",
+          "컴퓨터공학",
+          "소프트웨어",
+          "무라카미하루키",
+          "하루키",
+          "배민",
+          "커리어",
+          "이직",
+          "퇴사",
+          "취업준비",
+          "취준",
+          "SI회사",
+          "스펙",
+          "연봉",
+          "스타트업",
+          "면접",
+          "프로그래밍",
+          "코딩",
+          "프로그래머"
+        ],
+        "categoryId": "27",
+        "liveBroadcastContent": "none",
+        "localized": {
+          "title": "지방대 개발 비전공자가 배달의민족 리드 개발자가 되기까지",
+          "description": "영상 속 주인공 이동욱님은 현재 배달의민족에서 정산 시스템을 담당하는 리드 개발자로 일하고 있습니다. \n\n이동욱 개발자의 full story를 아티클로도 만나보세요! 👉 https://bit.ly/3MDjqGO\n\n동욱님은 소위 말하는 무스펙, 지방대, 비전공자 출신의 개발자였는데요. \n\nSI 회사를 거쳐 포털 회사에서 개발자로 일하고 있던 당시, 배달의민족의 한 팀장님으로부터 이직 제의를 받으셨다고 해요. \n그분이 먼저 연락을 주실 수 있었던 건 동욱님이 꾸준히 글을 올렸던 블로그 때문인데요. \n\n동욱님 블로그 _ https://jojoldu.tistory.com\n\n동욱님은 자신의 블로그명 '기억보다는 기록을'이 자신을 잘 나타내주는 말이라고 이야기합니다. 1일 1커밋을 비롯해 꾸준히 할 수 있는 습관을 가장 중요하게 생각하고 이를 통해 차곡차곡 성장해나가고 있는 개발자라는 생각이 들었는데요. \n\n동욱님 깃헙 _ https://github.com/jojoldu\n\n특히나 배달의민족처럼 빠르게 성장하는 스타트업에서 계속해서 성과를 내기 위해 업무 시간 외에도 미래를 위한 공부를 한다는 이야기가 인상 깊었습니다.\n\n개발자 뿐만 아니라 현재 커리어와 성장에 대한 고민을 하고 계신 분들\n무언가 새로운 도전을 망설이고 계신 분들에게도 이 영상을 추천드려요. \n\n---\n이 영상은 세계 1위 키보드 마우스 브랜드, 로지텍과 함께 만들었습니다.\n\n빠르게 성장하는 개발자를 위한 최고의 퍼포먼스 ! \n로지텍 프리미엄 마우스 MX Master 3\nhttps://smartstore.naver.com/ml/products/4666993946\n로지텍 프리미엄 키보드 MX KEYS \nhttps://smartstore.naver.com/ml/products/4666981696"
+        },
+        "defaultAudioLanguage": "ko"
+      }
+    }
+  ],
+  "pageInfo": {
+    "totalResults": 1,
+    "resultsPerPage": 1
+  }
+}
