@@ -2,12 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import getRouter from './router/router';
+import { router } from './router/router';
 import {
   RouterProvider
 } from "react-router-dom";
-
-const router = getRouter();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
