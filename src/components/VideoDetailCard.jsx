@@ -29,7 +29,7 @@ export default function VideoDetailCard({ videoId, channelId }) {
             id="ytplayer"
             type="text/html"
             src={`https://www.youtube.com/embed/${videoId}`}
-            frameborder="0"
+            frameBorder="0"
             allowfullscreen
           />
           <p className="font-bold">{video.snippet.title}</p>
