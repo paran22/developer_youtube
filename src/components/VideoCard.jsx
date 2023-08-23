@@ -2,7 +2,12 @@ import React from "react";
 import { formatKo } from "../utils/timeago";
 import { useNavigate } from "react-router-dom";
 
-export default function VideoCard({ video }) {
+export const cardStyle = Object.freeze({
+  large: "large",
+  small: "small",
+});
+
+export function VideoCard({ video, style }) {
   const { thumbnails, channelTitle, title, publishedAt } = video.snippet;
   const navigate = useNavigate();
   const navigateDetail = (video) => {
@@ -13,6 +18,12 @@ export default function VideoCard({ video }) {
       },
     });
   };
+  const titleStyle =
+    style === cardStyle.large
+      ? "text-base md:text-lg font-semibold line-clamp-2"
+      : "text-sm line-clamp-2";
+  const dateStyle =
+    style === cardStyle.large ? "text-xs sm:text-base opacity-80" : "text-xs";
   return (
     <div
       className="flex flex-col aspect-[5/4] max-w-md max-h-96"
@@ -25,13 +36,11 @@ export default function VideoCard({ video }) {
       />
       <div className="flex grow- px-2 py-2 gap-2 items-start">
         <div className="flex-col">
-          <p className="text-base md:text-lg font-semibold line-clamp-2">
-            {title}
-          </p>
-          <p className="text-xs sm:text-base opacity-80">{channelTitle}</p>
-          <p className="text-xs sm:text-base opacity-80">
-            {formatKo(publishedAt, "ko")}
-          </p>
+          <p className={titleStyle}>{title}</p>
+          {style === cardStyle.large && (
+            <p className="text-xs sm:text-base opacity-80">{channelTitle}</p>
+          )}
+          <p className={dateStyle}>{formatKo(publishedAt, "ko")}</p>
         </div>
       </div>
     </div>
