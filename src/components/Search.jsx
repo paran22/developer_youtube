@@ -11,7 +11,7 @@ export default function Search() {
     navigate(`/videos?keyword=${keyword}`);
   };
   return (
-    <form className="px-5 py-1 flex" onSubmit={onSubmit}>
+    <form className="px-5 py-1 hidden sm:flex" onSubmit={onSubmit}>
       <input
         className="inline-block w-80 px-4 border-2 border-light bg-transparent rounded-l-lg text-background focus:outline-0"
         type="text"
