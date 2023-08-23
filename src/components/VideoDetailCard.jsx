@@ -24,7 +24,7 @@ export default function VideoDetailCard({ videoId, channelId }) {
       {channel && video && (
         <section className="flex flex-col gap-2">
           <iframe
-            className="w-full aspect-video"
+            className="aspect-video"
             title={video.snippet.title}
             id="ytplayer"
             type="text/html"
@@ -32,7 +32,7 @@ export default function VideoDetailCard({ videoId, channelId }) {
             frameborder="0"
             allowfullscreen
           />
-          <p className="font-bold">{video.snippet.channeltitle}</p>
+          <p className="font-bold">{video.snippet.title}</p>
           <ChannelInfo channel={channel.snippet} />
           <p className="whitespace-pre-line pt-4">
             {video.snippet.description}
