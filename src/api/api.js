@@ -41,6 +41,13 @@ export default class Api {
       .then((res) => res.data.items[0]);
     return item;
   }
+
+  async getDummyChannelVideo() {
+    const items = await axios
+      .get("channelVideosDummy.json")
+      .then((res) => res.data.items);
+    return items;
+  }
 }
 
 
