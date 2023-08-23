@@ -2,36 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import getRouter from './router/router';
 import {
-  createBrowserRouter,
-  RouterProvider,
+  RouterProvider
 } from "react-router-dom";
-import VideoDetailPage from './pages/VideoDetailPage';
-import VideoListPage from './pages/VideoListPage';
-import NotFoundPage from './pages/NotFoundPage';
-import App from './App';
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    errorElement: <NotFoundPage />,
-    children: [
-      {
-        index: true,
-        element: <VideoListPage />
-      },
-      {
-        path: "/videos",
-        element: <VideoListPage />
-      },
-      {
-        path: "/videos/:videoId",
-        element: <VideoDetailPage />
-      }
-    ],
-  },
-]);
+const router = getRouter();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
