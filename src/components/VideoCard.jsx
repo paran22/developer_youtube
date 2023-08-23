@@ -8,7 +8,8 @@ export default function VideoCard({ video }) {
   const navigateDetail = (video) => {
     navigate(`/videos/${video.id.videoId}`, {
       state: {
-        vedio: video.snippet,
+        channelId: video.snippet.channelId,
+        vedioId: video.id.videoId,
       },
     });
   };
@@ -23,11 +24,6 @@ export default function VideoCard({ video }) {
         alt={video.description}
       />
       <div className="flex grow- px-2 py-2 gap-2 items-start">
-        <img
-          className="w-9 h-9 rounded-full"
-          src={thumbnails.medium.url}
-          alt={channelTitle}
-        />
         <div className="flex-col">
           <p className="text-base md:text-lg font-semibold line-clamp-2">
             {title}
