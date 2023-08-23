@@ -34,7 +34,7 @@ export default function VideoDetailCard({ videoId, channelId }) {
             type="text/html"
             src={`https://www.youtube.com/embed/${videoId}`}
             frameBorder="0"
-            allowfullscreen
+            allowFullScreen
           />
           <p className="font-bold">{video.snippet.title}</p>
           <ChannelInfo channel={channel.snippet} />

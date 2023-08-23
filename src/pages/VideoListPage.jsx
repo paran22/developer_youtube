@@ -22,7 +22,11 @@ export default function VideoListPage() {
       {videos && (
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 gap-y-2">
           {videos.map((video) => (
-            <VideoCard video={video} cardStyle={cardStyle.large} />
+            <VideoCard
+              key={video.id.videoId}
+              video={video}
+              cardStyle={cardStyle.large}
+            />
           ))}
         </ul>
       )}

@@ -12,13 +12,16 @@ export default function HorizontalVideoList({ channelId }) {
       staleTime: 1000 * 60 * 5,
     }
   );
-
   return (
     <>
       {videos && (
         <div className="h-56 flex gap-2 overflow-auto whitespace-nowrap">
           {videos.map((video) => (
-            <VideoCard video={video} style={cardStyle.small} />
+            <VideoCard
+              key={video.id.videoId}
+              video={video}
+              style={cardStyle.small}
+            />
           ))}
         </div>
       )}
