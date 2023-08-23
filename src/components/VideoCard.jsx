@@ -18,12 +18,13 @@ export function VideoCard({ video, style }) {
       },
     });
   };
-  const titleStyle =
-    style === cardStyle.large
-      ? "text-base md:text-lg font-semibold line-clamp-2"
-      : "text-sm line-clamp-2";
-  const dateStyle =
-    style === cardStyle.large ? "text-xs sm:text-base opacity-80" : "text-xs";
+  const isLargeStyle = style === cardStyle.large;
+  const titleStyle = isLargeStyle
+    ? "text-base md:text-lg font-semibold line-clamp-2"
+    : "text-sm line-clamp-2";
+  const dateStyle = isLargeStyle
+    ? "text-xs sm:text-base opacity-80"
+    : "text-xs";
   return (
     <div
       className="flex flex-col aspect-[5/4] max-w-md max-h-96"
