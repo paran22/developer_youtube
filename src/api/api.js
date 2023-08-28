@@ -3,7 +3,7 @@ import axios from "axios";
 export default class Api {
   constructor() {
     this.httpClient = axios.create({
-      baseURL: 'https://www.googleapis.com/youtube/v3',
+      baseURL: 'https://youtube.googleapis.com/youtube/v3',
       params: { key: process.env.REACT_APP_YOUTUBE_API_KEY }
     });
   }
@@ -16,7 +16,11 @@ export default class Api {
         type: 'video',
         q: `개발 ${keyword}`,
       }
-    }).then((res) => res.data.items);
+    }).then((res) => {
+      console.log(res.data.pageInfo.totalResults);
+      console.log(res.data.nextPageToken);
+      return res.data.items;
+    });
     return items;
   }
 
