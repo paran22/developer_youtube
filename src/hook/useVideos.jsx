@@ -3,7 +3,7 @@ import { useApiContext } from "../context/ApiContext";
 
 export default function useVideos(keyword) {
   const { api } = useApiContext();
-  const { isLoading, isError, data, fetchNextPage } = useInfiniteQuery(
+  const { isLoading, isError, error, data, fetchNextPage } = useInfiniteQuery(
     ["videos", keyword],
     async ({ pageParam = "" }) => api.getVideos(keyword, pageParam),
     {
@@ -11,5 +11,5 @@ export default function useVideos(keyword) {
     }
   );
 
-  return { isLoading, isError, data, fetchNextPage };
+  return { isLoading, isError, data, error, fetchNextPage };
 }
