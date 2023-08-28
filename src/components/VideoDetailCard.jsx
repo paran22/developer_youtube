@@ -2,19 +2,18 @@ import React from "react";
 import { useApiContext } from "../context/ApiContext";
 import { useQuery } from "@tanstack/react-query";
 import ChannelInfo from "./ChannelInfo";
+import useChannel from "../hook/useChannel";
 
 export default function VideoDetailCard({ videoId, channelId }) {
   const { api } = useApiContext();
   const {
-    isLoadingInChannel,
-    hasErrorInChannel,
+    isLoading: isLoadingInChannel,
+    isError: isErrorInChannel,
     data: channel,
-  } = useQuery(["channels", channelId], async () => api.getChannel(channelId), {
-    staleTime: 1000 * 60 * 5,
-  });
+  } = useChannel(channelId);
   const {
     isLoadingInVideo,
-    hasErrorInVideo,
+    isErrorInVideo,
     data: video,
   } = useQuery(["video", videoId], async () => api.getVideo(videoId), {
     staleTime: 1000 * 60 * 1,
@@ -23,8 +22,8 @@ export default function VideoDetailCard({ videoId, channelId }) {
     <>
       {isLoadingInChannel && <p>Loading...</p>}
       {isLoadingInVideo && <p>Loading...</p>}
-      {hasErrorInChannel && <p>error...</p>}
-      {hasErrorInVideo && <p>error...</p>}
+      {isErrorInChannel && <p>error...</p>}
+      {isErrorInVideo && <p>error...</p>}
       {channel && video && (
         <section className="flex flex-col gap-2">
           <iframe
