@@ -1,23 +1,19 @@
 import React from "react";
-import { useApiContext } from "../context/ApiContext";
-import { useQuery } from "@tanstack/react-query";
 import ChannelInfo from "./ChannelInfo";
 import useChannel from "../hook/useChannel";
+import useVideo from "../hook/useVideo";
 
 export default function VideoDetailCard({ videoId, channelId }) {
-  const { api } = useApiContext();
   const {
     isLoading: isLoadingInChannel,
     isError: isErrorInChannel,
     data: channel,
   } = useChannel(channelId);
   const {
-    isLoadingInVideo,
-    isErrorInVideo,
+    isLoading: isLoadingInVideo,
+    isError: isErrorInVideo,
     data: video,
-  } = useQuery(["video", videoId], async () => api.getVideo(videoId), {
-    staleTime: 1000 * 60 * 1,
-  });
+  } = useVideo(videoId);
   return (
     <>
       {isLoadingInChannel && <p>Loading...</p>}
