@@ -16,7 +16,7 @@ export default function VideoListPage() {
     if (inView) {
       fetchNextPage();
     }
-  }, [inView]);
+  }, [inView, fetchNextPage]);
 
   return (
     <div className="w-4/5 mx-auto pt-4 pb-10">
