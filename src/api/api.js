@@ -10,20 +10,17 @@ export default class Api {
     });
   }
 
-  async getVideos(keyword) {
-    const items = await this.httpClient.get('search', {
+  async getVideos(keyword, pageToken) {
+    const data = await this.httpClient.get('search', {
       params: {
         part: 'snippet',
         maxResults: 20,
         type: 'video',
         q: `개발 ${keyword}`,
+        pageToken: pageToken,
       }
-    }).then((res) => {
-      console.log(res.data.pageInfo.totalResults);
-      console.log(res.data.nextPageToken);
-      return res.data.items;
-    });
-    return items;
+    }).then((res) => res.data);
+    return data;
   }
 
   async getChannel(channelId) {

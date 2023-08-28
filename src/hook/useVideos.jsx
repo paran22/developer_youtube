@@ -1,15 +1,15 @@
-import { useQuery } from "@tanstack/react-query";
+import { useInfiniteQuery } from "@tanstack/react-query";
 import { useApiContext } from "../context/ApiContext";
 
 export default function useVideos(keyword) {
   const { api } = useApiContext();
-  const fetchVideos = useQuery(
+  const { isLoading, isError, data, fetchNextPage } = useInfiniteQuery(
     ["videos", keyword],
-    async () => api.getVideos(keyword),
+    async ({ pageParam = "" }) => api.getVideos(keyword, pageParam),
     {
-      staleTime: 1000 * 60 * 5,
+      getNextPageParam: (lastPage) => lastPage.nextPageToken ?? undefined,
     }
   );
 
-  return { fetchVideos };
+  return { isLoading, isError, data, fetchNextPage };
 }
