@@ -1,20 +1,15 @@
 import React from "react";
 import { VideoCard, cardStyle } from "../components/VideoCard";
 import { useSearchParams } from "react-router-dom";
-import { useQuery } from "@tanstack/react-query";
-import { useApiContext } from "../context/ApiContext";
+import useVideos from "../hook/useVideos";
 
 export default function VideoListPage() {
   const [searchParams] = useSearchParams();
   const keyword = searchParams.get("keyword");
-  const { api } = useApiContext();
   const {
-    isLoading,
-    error: hasError,
-    data: videos,
-  } = useQuery(["videos", keyword], async () => api.getVideos(keyword), {
-    staleTime: 1000 * 1,
-  });
+    fetchVideos: { isLoading, error: hasError, data: videos },
+  } = useVideos(keyword);
+
   return (
     <div className="w-4/5 mx-auto pt-4 pb-10">
       {isLoading && <p>Loading...</p>}
